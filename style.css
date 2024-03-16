@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+header ul {
+  height: 50px;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  gap: 2.5rem;
+}
+
+.judul {
+  text-align: center;
+  margin: 2rem auto;
+  width: fit-content;
+}
+
+.container {
+  display: flex;
+  width: fit-content;
+  gap: 28px;
+  margin: 0 auto 5rem;
+}
+
+.column-1 {
+  display: grid;
+  grid-template-areas:
+    "tentara tentara"
+    "arsitek fotografer"
+    "pramugari fotografer";
+  grid-template-rows: repeat(3, min-content);
+  align-items: end;
+  gap: 30px;
+}
+
+.tentara {
+  grid-area: tentara;
+  width: 490px;
+  height: 180px;
+  background-color: #d5ffdd;
+  border-radius: 20px;
+  display: flex;
+  grid-column: span 2;
+}
+
+.tentara .tentara-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.tentara .tentara-caption h2 {
+  font-weight: 500;
+}
+
+.tentara img {
+  margin-top: -48px;
+}
+
+.tentara button {
+  background-color: #399349;
+  color: #fff;
+  border-radius: 15px;
+  width: 85%;
+  padding: 0.3rem 0;
+  font-size: 20px;
+}
+
+.arsitek {
+  grid-area: arsitek;
+  background-color: #fff4dc;
+  border-radius: 20px;
+  width: 235px;
+  height: 180px;
+  position: relative;
+}
+
+.arsitek img,
+.pramugari img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+}
+
+.arsitek button {
+  background-color: #e29a00;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 15px;
+  padding: 0.2rem 0;
+  width: 75%;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.pramugari {
+  grid-area: pramugari;
+  background-color: #ffced7;
+  border-radius: 20px;
+  width: 235px;
+  height: 180px;
+  position: relative;
+  padding: 0 2rem;
+}
+
+.pramugari button {
+  background-color: #ff5573;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 15px;
+  padding: 0.2rem 0;
+  width: 75%;
+  position: absolute;
+  bottom: 10px;
+}
+
+.fotografer {
+  grid-area: fotografer;
+  background-color: #e2f2ff;
+  border-radius: 20px;
+  width: 230px;
+  height: 392px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.fotografer h3 {
+  font-weight: 500;
+}
+
+.fotografer p {
+  width: 50%;
+  font-size: 12px;
+}
+
+.fotografer button {
+  background-color: #3279af;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 15px;
+  padding: 0.2rem 0;
+  width: 75%;
+}
+
+.dokter,
+.ilmuan,
+.pilot {
+  background-color: #fff;
+  border: 1px solid #d8d6c1;
+  width: 423px;
+  height: 96px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.dokter div,
+.ilmuan div,
+.pilot div {
+  margin-left: 0.5rem;
+  width: 40%;
+  margin-top: 1rem;
+}
+
+.dokter h3,
+.ilmuan h3,
+.pilot h3 {
+  font-weight: 500;
+}
+
+.dokter button,
+.ilmuan button,
+.pilot button {
+  background-color: #d8d6c1;
+  color: #fff;
+  border-radius: 10px;
+  width: 100%;
+  padding: 0.1rem;
+}
+
+.column-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.column-2 .row-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  width: 500px;
+  height: 392px;
+}
+
+.column-2 .row-2 {
+  display: flex;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  width: 500px;
+  height: 180px;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pembalap,
+.astronout {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pembalap div,
+.astronout div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 2rem;
+}
+
+.pembalap button,
+.astronout button {
+  background-color: #d8d6c1;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 426px) {
+  .judul {
+    margin-top: 46px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 87px auto;
+  }
+
+  .column-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tentara {
+    width: 289px;
+    height: 299px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tentara .tentara-caption {
+    margin-top: -15px;
+    gap: 10px;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .arsitek,
+  .pramugari {
+    width: 289px;
+    height: 221px;
+  }
+
+  .arsitek img,
+  .pramugari img {
+    width: 210px;
+    height: 210px;
+  }
+
+  .fotografer img {
+    width: 230px;
+    height: 230px;
+    margin-bottom: 26px;
+  }
+
+  .fotografer {
+    width: 289px;
+    height: 314px;
+    margin-top: 59px;
+    position: relative;
+    gap: 0;
+    padding-bottom: 3.5rem;
+  }
+
+  .fotografer h3 {
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  .fotografer p {
+    width: 60%;
+  }
+
+  .fotografer button {
+    position: absolute;
+    bottom: 35%;
+  }
+
+  .column-2 .row-1 {
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .dokter,
+  .ilmuan,
+  .pilot {
+    width: 289px;
+    height: 223px;
+    background-color: #e9e8e2;
+    border: none;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .dokter img,
+  .ilmuan img,
+  .pilot img {
+    width: 213px;
+    height: 213px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+  }
+
+  .dokter div,
+  .ilmuan div,
+  .pilot div {
+    margin-left: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .dokter h3,
+  .ilmuan h3,
+  .pilot h3 {
+    display: none;
+  }
+
+  .dokter button,
+  .ilmuan button,
+  .pilot button {
+    position: absolute;
+    width: 80%;
+    padding: 0.3rem;
+    font-size: 20px;
+    bottom: 12px;
+    left: 50%;
+    border-radius: 15px;
+    transform: translate(-50%, 0);
+  }
+
+  .column-2 .row-2 {
+    flex-direction: column;
+    background-color: #fff;
+    width: fit-content;
+    height: fit-content;
+    gap: 30px;
+  }
+
+  .pembalap,
+  .astronout {
+    flex-direction: column;
+    border-radius: 20px;
+    width: 289px;
+    height: 223px;
+    position: relative;
+  }
+
+  .pembalap {
+    background-color: #ffdbc5;
+  }
+
+  .astronout {
+    background-color: #8fc5ed;
+  }
+
+  .pembalap img,
+  .astronout img {
+    width: 213px;
+    height: 213px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -2px;
+  }
+
+  .pembalap p,
+  .astronout p {
+    display: none;
+  }
+
+  .pembalap button,
+  .astronout button {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 10px;
+    border-radius: 15px;
+    width: 70%;
+    font-size: 20px;
+    padding: 0.3rem;
+  }
+
+  .pembalap button {
+    background-color: #e36415;
+  }
+
+  .astronout button {
+    background-color: #275e87;
+  }
+}
